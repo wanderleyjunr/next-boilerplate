@@ -11,6 +11,16 @@
     "lint": "next lint ",
     "postinstall": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix", "yarn test --findRelatedTests --bail"
+    ]
+  },
   "dependencies": {
     "husky": "^7.0.2",
     "next": "11.1.2",
