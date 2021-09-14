@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "test:watch": "jest --watch" ,
+    "test:watch": "jest --watch",
     "lint": "next lint ",
     "postinstall": "husky install"
   },
@@ -18,23 +18,28 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix", "yarn test --findRelatedTests --bail"
+      "yarn lint",
+      "yarn test --findRelatedTests --bail"
     ]
   },
   "dependencies": {
     "husky": "^7.0.2",
     "next": "11.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.15.0",
+    "@next/eslint-plugin-next": "^11.1.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.0",
     "@types/jest": "^27.0.1",
     "@types/react": "^17.0.20",
+    "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
+    "babel-plugin-styled-components": "^1.13.2",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
